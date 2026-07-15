@@ -5,7 +5,7 @@ const path = window.location.pathname;
 // ── LOGIN ──────────────────────────────────────────
 if (path.includes('login')) {
 
-  document.getElementById('login-btn').addEventListener('click', async () => {
+document.getElementById('login-btn')?.addEventListener('click', async () => {    
     const correo = document.getElementById('correo').value.trim();
     const password = document.getElementById('password').value;
     const errorEl = document.getElementById('login-error');
