@@ -1,0 +1,229 @@
+/* Hero */
+.hero {
+  padding: 5rem 2rem 4rem;
+  text-align: center;
+  border-bottom: 0.5px solid var(--color-border);
+}
+
+.hero__eyebrow {
+  font-size: var(--text-xs);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 1rem;
+}
+
+.hero__title {
+  font-size: var(--text-3xl);
+  font-weight: 300;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.hero__title em {
+  font-style: italic;
+  color: var(--color-accent);
+}
+
+.hero__sub {
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  max-width: 480px;
+  margin: 0 auto 2rem;
+  line-height: 1.7;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Featured */
+.featured {
+  padding: 3rem 2rem;
+  border-bottom: 0.5px solid var(--color-border);
+}
+
+.featured__header {
+  margin-bottom: 2rem;
+}
+
+.featured__eyebrow {
+  font-size: var(--text-xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+}
+
+.featured__title {
+  font-size: var(--text-2xl);
+  margin-bottom: 0.25rem;
+}
+
+.featured__sub {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.featured__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.featured__footer {
+  text-align: center;
+}
+
+/* Card de perfume */
+.perfume-card {
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-md);
+  border: 0.5px solid var(--color-border);
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.perfume-card:hover {
+  border-color: var(--color-accent);
+}
+
+.perfume-card__img {
+  height: 160px;
+  background: var(--color-border);
+  overflow: hidden;
+  position: relative;
+}
+
+.perfume-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.perfume-card__save {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--color-bg);
+  border: 0.5px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s, border-color 0.2s;
+  z-index: 1;
+}
+
+.perfume-card__save.saved {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-bg);
+}
+
+.perfume-card__body {
+  padding: 0.75rem;
+}
+
+.perfume-card__brand {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-accent);
+  margin-bottom: 2px;
+}
+
+.perfume-card__name {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--color-text);
+  margin-bottom: 2px;
+  line-height: 1.2;
+}
+
+.perfume-card__type {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  margin-bottom: 8px;
+}
+
+.perfume-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.perfume-card__price {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.perfume-card__link {
+  font-size: 11px;
+  color: var(--color-accent);
+}
+
+/* Why */
+.why {
+  background: var(--color-bg-secondary);
+  padding: 3rem 2rem;
+  border-top: 0.5px solid var(--color-border);
+}
+
+.why__header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.why__eyebrow {
+  font-size: var(--text-xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+}
+
+.why__title {
+  font-size: var(--text-xl);
+}
+
+.why__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.why__item {
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+.why__icon {
+  font-size: 1.8rem;
+  color: var(--color-accent);
+  margin-bottom: 0.75rem;
+}
+
+.why__item-title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.why__item-text {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}

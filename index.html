@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="color-scheme" content="light">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sillage — Catálogo de Perfumes</title>
+  <link rel="stylesheet" href="/assets/css/global.css">
+  <link rel="stylesheet" href="/assets/css/index.css">
+</head>
+<body>
+
+  <div id="header-container"></div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero__eyebrow">Catálogo de fragancias</div>
+    <h1 class="hero__title">Descubre tu<br><em>fragancia ideal</em></h1>
+    <p class="hero__sub">Explora cientos de perfumes filtrados por aroma, ocasión, marca y precio. Encuentra la fragancia que habla por ti.</p>
+    <div class="hero__actions">
+      <a href="/pages/catalogo.html" class="btn btn--primary">Explorar catálogo</a>
+      <a href="#about" class="btn btn--outline">Sobre Sillage</a>
+    </div>
+  </section>
+
+  <!-- Perfumes destacados -->
+  <section class="featured">
+    <div class="featured__header">
+      <div class="featured__eyebrow">Selección destacada</div>
+      <h2 class="featured__title">Perfumes destacados</h2>
+      <p class="featured__sub">Una selección de fragancias para comenzar a explorar</p>
+    </div>
+    <div class="featured__grid" id="featured-grid">
+      <!-- Cards generadas por JS -->
+    </div>
+    <div class="featured__footer">
+      <a href="/pages/catalogo.html" class="btn btn--outline">Ver catálogo completo</a>
+    </div>
+  </section>
+
+  <!-- Por qué Sillage -->
+  <section class="why" id="about">
+    <div class="why__header">
+      <div class="why__eyebrow">¿Por qué Sillage?</div>
+      <h2 class="why__title">Todo lo que necesitas para elegir tu perfume</h2>
+    </div>
+    <div class="why__grid">
+      <div class="why__item">
+        <div class="why__icon">⊞</div>
+        <h3 class="why__item-title">Filtros avanzados</h3>
+        <p class="why__item-text">Filtra por marca, familia olfativa, ocasión y rango de precio de manera combinada.</p>
+      </div>
+      <div class="why__item">
+        <div class="why__icon">◈</div>
+        <h3 class="why__item-title">Pirámide olfativa</h3>
+        <p class="why__item-text">Conoce las notas de salida, corazón y fondo de cada fragancia en detalle.</p>
+      </div>
+      <div class="why__item">
+        <div class="why__icon">♡</div>
+        <h3 class="why__item-title">Guarda tus favoritos</h3>
+        <p class="why__item-text">Crea tu lista de interés sin necesidad de registrarte.</p>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-container"></div>
+  
+
+  <script type="module" src="/assets/js/index.js"></script>
+</body>
+</html>

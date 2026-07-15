@@ -1,0 +1,169 @@
+.catalogo-layout {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  min-height: calc(100vh - 56px);
+}
+
+/* Sidebar */
+.sidebar {
+  background: var(--color-bg-secondary);
+  border-right: 0.5px solid var(--color-border);
+  padding: 1.5rem;
+  position: sticky;
+  top: 56px;
+  height: calc(100vh - 56px);
+  overflow-y: auto;
+}
+
+.sidebar__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.sidebar__title {
+  font-size: var(--text-xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.sidebar__clear {
+  font-size: 11px;
+  color: var(--color-accent);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+/* Grupos de filtros */
+.filter-group {
+  margin-bottom: 1.5rem;
+}
+
+.filter-group__label {
+  font-family: var(--font-heading);
+  font-size: var(--text-base);
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.filter-group__options {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  cursor: pointer;
+}
+
+.filter-option input {
+  accent-color: var(--color-accent);
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
+
+.filter-option:has(input:checked) {
+  color: var(--color-text);
+}
+
+/* Rango de precio */
+.filter-range {
+  width: 100%;
+  accent-color: var(--color-accent);
+}
+
+.filter-range__labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  margin-top: 4px;
+}
+
+/* Main */
+.catalogo-main {
+  padding: 1.5rem;
+}
+
+.catalogo-main__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.catalogo-main__title {
+  font-size: var(--text-xl);
+  margin-bottom: 2px;
+}
+
+.catalogo-main__count {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.catalogo-main__sort {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  border: 0.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 6px 10px;
+  background: var(--color-bg);
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+/* Filtros activos */
+.active-filters {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.active-filter-pill {
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: var(--color-accent);
+  color: var(--color-bg);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.active-filter-pill button {
+  background: none;
+  border: none;
+  color: var(--color-bg);
+  cursor: pointer;
+  font-size: 10px;
+  padding: 0;
+  line-height: 1;
+}
+
+/* Grid de perfumes */
+.perfumes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 1rem;
+}
+
+.catalogo-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  padding: 3rem 0;
+}

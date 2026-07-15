@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="color-scheme" content="light">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo — Sillage</title>
+  <link rel="stylesheet" href="/assets/css/global.css">
+  <link rel="stylesheet" href="/assets/css/catalogo.css">
+</head>
+<body>
+
+  <div id="header-container"></div>
+
+  <div class="catalogo-layout">
+
+    <!-- Sidebar de filtros -->
+    <aside class="sidebar">
+      <div class="sidebar__header">
+        <span class="sidebar__title">Filtros</span>
+        <button class="sidebar__clear" id="clear-filters">Limpiar</button>
+      </div>
+
+      <div class="filter-group" id="filter-tipo"></div>
+      <div class="filter-group" id="filter-familia"></div>
+      <div class="filter-group" id="filter-ocasion"></div>
+      <div class="filter-group" id="filter-marca"></div>
+      <div class="filter-group" id="filter-genero"></div>
+
+      <div class="filter-group">
+        <div class="filter-group__label">Precio máximo</div>
+        <input type="range" class="filter-range" id="filter-precio" min="0" max="1000" value="1000">
+        <div class="filter-range__labels">
+          <span>$0</span>
+          <span id="precio-label">$1000 USD</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="catalogo-main">
+      <div class="catalogo-main__header">
+        <div>
+          <h1 class="catalogo-main__title">Catálogo de perfumes</h1>
+          <div class="catalogo-main__count" id="results-count"></div>
+        </div>
+        <select class="catalogo-main__sort" id="sort-select">
+          <option value="nombre">Nombre A-Z</option>
+          <option value="precio_asc">Precio: menor a mayor</option>
+          <option value="precio_desc">Precio: mayor a menor</option>
+        </select>
+      </div>
+
+      <div class="active-filters" id="active-filters"></div>
+      <div class="perfumes-grid" id="perfumes-grid"></div>
+    </main>
+
+  </div>
+
+  <div id="footer-container"></div>
+
+  <script type="module" src="/assets/js/catalogo.js"></script>
+</body>
+</html>
