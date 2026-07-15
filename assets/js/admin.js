@@ -26,9 +26,11 @@ document.getElementById('login-btn')?.addEventListener('click', async () => {
 // ── PANEL ──────────────────────────────────────────
 if (path.includes('panel')) {
 
-  supabase.auth.getSession().then(({ data }) => {
-    if (!data.session) window.location.href = '/admin/login.html';
-  });
+  const { data } = await supabase.auth.getSession();
+  if (!data.session) {
+    window.location.href = '/admin/login.html';
+    throw new Error('Sin sesión');
+  }
 
   document.getElementById('logout-btn')?.addEventListener('click', async () => {
     await supabase.auth.signOut();
@@ -48,7 +50,6 @@ if (path.includes('panel')) {
   cargarStats();
   cargarPerfumes();
   cargarCategorias();
-
   // ── ESTADÍSTICAS ──
   async function cargarStats() {
     const [perfumes, marcas, familias, notas] = await Promise.all([
